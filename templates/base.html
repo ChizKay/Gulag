@@ -14,16 +14,19 @@
     {% endblock %}
 
     {% block corecss %}
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    {% endblock %}
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,500,600,700">
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    {% endblock %}    
 
     {% block extra_css %}
     {% endblock %}
 
     {% block corejs %}
+        <script src="https://kit.fontawesome.com/7260815788.js" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     {% endblock %}
 
     {% block extra_js %}
@@ -32,78 +35,49 @@
     <title>Galug {% block extra_title %}{% endblock %}</title>
   </head>
   <body>
-    <div class="header">
-        <div class="header-top">
-            <div class="container">
-                <div class="call pull-left">
-                    <p>Call us toll free : <span>+353 83 12 34 567</span></p>
-                </div>
-                <div class="user-info pull-right">
-                    <div class="user">
-                    {% if request.user.is_authenticated %}
-                        {% if request.user.is_superuser %}
-                            <ul>
-                                <li><a href="#">Product Management</a></li>
-                                <li><a href="{% url 'account_logout' %}">Log Out</a></li>
-                            </ul>
-                        {% endif %}
-                        <ul>
-                            <li><a href="#">Profile</a></li>
-                            <li><a href="{% url 'account_logout' %}">Log Out</a></li>
-                        </ul>
-                    {% else %} 
-                        <ul>
-                            <li><a href="{% url 'account_login' %}">Login</a></li>
-                            <li><a href="{% url 'account_signup' %}">Register</a></li>
-                        </ul>
-                    {% endif %}   
-                    </div>
-                </div>
+    <header class="container-fluid fixed-top">
+        <div id="top-nav" class="row bg-white pt-lg-2 d-none d-lg-flex">
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
+                <a href="{% url 'home' %}" class="nav-link main-logo-link">
+                    <h2 class="logo-font text-orange my-0"><strong>Gulag</strong></h2>
+                </a>
             </div>
-        </div>
-        <div class="header-mid">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3 header-left">
-                        <div class="logo"> <a href="{% url 'home' %}"><img src="#" alt="#"></a> </div>
-                    </div>
-                    <div class="col-md-6 search_block">
-                        <div class="search">
-                        <form method="GET" action="">
-                            <div class="search_cat">
-                            <select class="search-category" name="search-category">
-                                <option class="computer" selected>All Categories</option>
-                                <option class="computer">Cat 1</option>
-                                <option class="computer">Cat 2</option>
-                                <option class="computer">Cat 3</option>
-                                <option class="computer">Cat 4</option>
-                                <option class="computer">Cat 5</option>
-                            </select>
-                            <span class="fa fa-angle-down"></span> </div>
-                            <input name="q" type="text" placeholder="Search...">
-                            <button type="submit" class="btn submit"> <span class="fa fa-search"></span></button>
-                        </form>
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+                <form method="GET" action="">
+                    <div class="input-group w-100">
+                        <input class="form-control border rounded-1" type="text" name="q" placeholder="Search here...">
+                        <div class="input-group-append">
+                            <button class="form-control btn btn-outline-info border border-black rounded-1" type="submit">
+                                <span class="icon">
+                                    <i class="fas fa-search"></i>
+                                </span>
+                            </button>
                         </div>
                     </div>
-                    <div class="col-md-3 header-right">
-                         <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-red{% endif %} nav-link" href="">
-                            <div class="text-center">
-                                <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-                                <p class="my-0">
-                                    {% if grand_total %}
-                                        ${{ grand_total|floatformat:2 }}
-                                    {% else %}
-                                        $0.00
-                                    {% endif %}
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
+                </form>
+            </div>
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-right">
+            {% if request.user.is_authenticated %}
+                {% if request.user.is_superuser %}
+                    <a href="#"><i class="fas fa-users-cog"></i> My Account</a>
+                {% endif %}
+                    <a class="btn btn-outline-info ml-3" href="{% url 'account_logout' %}">Logout</a>
+            {% else %} 
+                <a href="{% url 'account_login' %}"> Login</a>
+                <a class="btn btn-outline-info ml-3" href="#">Sign up</a>
+            {% endif %}
             </div>
         </div>
-    </div>
-
+        <div class="row bg-white">
+            <nav class="navbar navbar-expand-lg navbar-light w-100">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                {% include 'includes/mobile-top-header.html' %}
+                {% include 'includes/main-nav.html' %}
+            </nav>
+        </div>    
+    </header>
     {% if messages %}
         <div class="message-container"></div>
     {% endif %}
