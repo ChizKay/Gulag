@@ -61,7 +61,19 @@ i{
         left: 0;
         z-index: 1030;
     }
+
     .header-container {
-        padding-top: 100px;
+        padding-top: 106px;
+    }
+}
+
+/* pad the top a bit when navbar is collapsed on mobile */
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 58px;
+    }
+
+    body {
+        height: calc(100vh - 58px);
     }
 }
