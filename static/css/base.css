@@ -14,10 +14,6 @@ body {
     width: fit-content;
 }
 
-a{
-    text-decoration: none !important;;
-}
-
 i{
     color:#17A2B8;
 }
@@ -43,6 +39,12 @@ i{
 	background: white;
 	z-index: -1;
 }
+
+a.category-badge > span.badge:hover {
+    background: #17A2B8 !important;
+    color: #fff !important;
+    border-color: #17A2B8 !important;
+} 
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
