@@ -49,10 +49,16 @@
     </ul>
     <ul class="navbar-nav w-auto mx-auto">
         <li class="nav-item mx-3 mx-md-sm-xs-o">
-            <a href="#"><i class="fas fa-heart"> &nbsp; Wishlist</i></a>
+            <a class="text-dark" href="#"><i class="fas fa-heart">&nbsp; Wishlist</i></a>
         </li>
         <li class="nav-item mx-3 mx-md-sm-xs-0">
-            <a href="{% url 'view_cart' %}"><i class="fas fa-shopping-cart"> &nbsp; Cart</i></a>
+            <a class="text-dark" href="{% url 'view_cart' %}">
+            {% if product_count > 0 %}
+            <i class="fas fa-shopping-cart">&nbsp; Cart&nbsp;({{product_count}})</i>
+            {% else %}
+            <i class="fas fa-shopping-cart">&nbsp; Cart</i>
+            {% endif %}
+            </a>
         </li>
     </ul>
 </div>
