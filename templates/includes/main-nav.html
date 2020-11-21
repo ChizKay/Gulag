@@ -49,14 +49,15 @@
     </ul>
     <ul class="navbar-nav w-auto mx-auto">
         <li class="nav-item mx-3 mx-md-sm-xs-o">
-            <a class="text-dark" href="#"><i class="fas fa-heart">&nbsp; Wishlist</i></a>
+            <i class="fas fa-heart"></i><a class="text-secondary text-decoration-none" href="#">&nbsp; Wishlist</a>
         </li>
         <li class="nav-item mx-3 mx-md-sm-xs-0">
-            <a class="text-dark" href="{% url 'view_cart' %}">
+            <i class="fas fa-shopping-cart"></i>
+            <a class="text-secondary text-decoration-none" href="{% url 'view_cart' %}">
             {% if product_count > 0 %}
-            <i class="fas fa-shopping-cart">&nbsp; Cart&nbsp;({{product_count}})</i>
+            &nbsp; Cart&nbsp;({{product_count}})
             {% else %}
-            <i class="fas fa-shopping-cart">&nbsp; Cart</i>
+            &nbsp; Cart
             {% endif %}
             </a>
         </li>
