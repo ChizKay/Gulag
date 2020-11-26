@@ -50,6 +50,10 @@ a.category-badge > span.badge:hover {
     border-color: #17A2B8 !important;
 }
 
+input[name='q']::placeholder {
+    color: #aab7c4;
+}
+
 .btt-button {
     height: 42px;
     width: 42px;
