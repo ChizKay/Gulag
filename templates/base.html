@@ -60,10 +60,23 @@
             </div>
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-right">
             {% if request.user.is_authenticated %}
-                {% if request.user.is_superuser %}
-                    <a class="text-secondary text-decoration-none" href="{% url 'profile' %}"><i class="fas fa-users-cog"></i> My Account</a>
-                {% endif %}
-                    <a class="btn btn-outline-info ml-3" href="{% url 'account_logout' %}">Logout</a>
+                    <ul class="list-inline list-unstyled text-center text-lg-right text-info my-0">
+                        <li class="list-inline-item dropdown">
+                            <a class="text-black nav-link" href="#" id="user-options"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-user fa-lg"></i> &nbsp;My Account
+                            </a>
+                            <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                               {% if request.user.is_superuser %}
+                                <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
+                                {% endif %}
+                                <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>  
+                            </div>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="btn btn-outline-info ml-3" href="{% url 'account_logout' %}">Logout</a>
+                        </li>
+                    </ul>
             {% else %} 
                 <a class="text-secondary text-decoration-none" href="{% url 'account_login' %}"> Login</a>
                 <a class="btn btn-outline-info ml-3" href="#">Sign up</a>
