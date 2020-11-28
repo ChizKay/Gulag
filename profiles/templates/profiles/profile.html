@@ -15,12 +15,23 @@
 
 {% block content %}
     <div class="overlay"></div>
+    <hr>
     <div class="container">
         <div class="row">
-            <div class="col">
-                <hr>
-                <h2 class="logo-font mb-4">My Profile</h2>
-                <hr>
+            <div class="col mt-4">
+                <div class="breadcrumb">
+                    <span class="mr-2">
+                        <a class="text-info small logo-font" href="{% url 'home' %}">
+                        <span>Home</span>
+                        </a>
+                    </span>
+                    <span><i class="fas fa-chevron-right text-secondary"></i></span>
+                    <span class="mr-2 text-dark">
+                        <a class="text-dark logo-font ml-2" href="{% url 'profile' %}">
+                            Profile
+                        </a>
+                    </span>
+                </div>
             </div>
         </div>
         <div class="row">
@@ -30,11 +41,13 @@
                     {% csrf_token %}
                     {{ form|crispy }}
                     <button class="btn btn-info rounded-1 text-uppercase float-right">Update Information</button>
+                    <br>
+                    <br>
                 </form>
             </div>
             <div class="col-12 col-lg-6">
                 <p class="text-muted">Order History</p>
-                <div class="order-history table-responsive">
+                <div class="order-history table-responsive jumbotron">
                     <table class="table table-sm table-borderless">
                         <thead>
                             <tr>
@@ -48,7 +61,7 @@
                             {% for order in orders %}
                                 <tr>
                                     <td>
-                                        <a href="{% url 'order_history' order.order_number %}"
+                                        <a class="text-info" href="{% url 'order_history' order.order_number %}"
                                         title="{{ order.order_number }}">
                                             {{ order.order_number|truncatechars:6 }}
                                         </a>

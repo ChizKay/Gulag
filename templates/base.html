@@ -38,7 +38,7 @@
   </head>
   <body>
     <header class="container-fluid fixed-top">
-        <div id="top-nav" class="row bg-white pt-lg-2 d-none d-lg-flex">
+        <div id="top-nav" class="row bg-dark pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
                     <h2 class="logo-font text-info my-0"><strong>Gulag</strong></h2>
@@ -62,9 +62,9 @@
             {% if request.user.is_authenticated %}
                     <ul class="list-inline list-unstyled text-center text-lg-right text-info my-0">
                         <li class="list-inline-item dropdown">
-                            <a class="text-black nav-link" href="#" id="user-options"
+                            <a class="text-white nav-link" href="#" id="user-options"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-user fa-lg"></i> &nbsp;My Account
+                                <i class="fas fa-user fa-lg text-secondary"></i> &nbsp;My Account
                             </a>
                             <div class="dropdown-menu border-0" aria-labelledby="user-options">
                                {% if request.user.is_superuser %}
@@ -74,17 +74,17 @@
                             </div>
                         </li>
                         <li class="list-inline-item">
-                            <a class="btn btn-outline-info ml-3" href="{% url 'account_logout' %}">Logout</a>
+                            <a class="btn btn-info ml-3" href="{% url 'account_logout' %}">Logout</a>
                         </li>
                     </ul>
             {% else %} 
-                <a class="text-secondary text-decoration-none" href="{% url 'account_login' %}"> Login</a>
-                <a class="btn btn-outline-info ml-3" href="#">Sign up</a>
+                <a class="text-white text-decoration-none" href="{% url 'account_login' %}">Login</a>
+                <a class="btn btn-info ml-3" href="{% url 'account_signup' %}">Sign up</a>
             {% endif %}
             </div>
         </div>
-        <div class="row bg-white">
-            <nav class="navbar navbar-expand-lg navbar-light w-100">
+        <div class="row bg-dark">
+            <nav class="navbar navbar-expand-lg navbar-dark w-100">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -123,6 +123,5 @@
     </script>
     {% endblock %}
 
-    
   </body>
 </html>

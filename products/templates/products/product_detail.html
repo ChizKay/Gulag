@@ -12,22 +12,22 @@
 {% block content %}
 <br>
 <div class="overlay"></div>
-<br>
+<hr>
 <div class="container-fluid">
     <div class="breadcrumb">
         <span class="mr-2">
-            <a class="text-secondary" href="{% url 'home' %}">
+            <a class="text-info small logo-font" href="{% url 'home' %}">
             <span>Home</span>
             </a>
         </span>
         <span><i class="fas fa-chevron-right text-secondary"></i></span>
         <span class="mr-2 text-secondary">
-            <a class="text-secondary ml-2" href="{% url 'products' %}">
+            <a class="text-info small logo-font ml-2" href="{% url 'products' %}">
                 Products
             </a>
         </span>
         <span class="mr-2"><i class="fas fa-chevron-right text-secondary"></i></span>
-        <span class="logo-font text-info">
+        <span class="logo-font">
         {{product.name}}
         </span>
     </div>
@@ -46,18 +46,18 @@
             </div>
         </div>
         <div class="col-12 col-md-6 col-lg-4">
-            <div class="product-details-container mb-5 mt-md-5">
-                <p class="mb-0">{{ product.name }}</p>
+            <div class="jumbotron product-details-container mb-5 mt-md-5">
+                <p class="mb-0 mb-3 logo-font text-info">{{ product.name }}</p>
                 <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
                 {% if product.category %}
                 <p class="small mt-1 mb-0">
                     <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
-                        <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
+                        <i class="fas fa-tag mr-1 text-info"></i>{{ product.category.friendly_name }}
                     </a>
                 </p>
                 {% endif %}
                 {% if product.rating %}
-                    <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+                    <small class="text-muted"><i class="fas fa-star mr-1 text-danger"></i>{{ product.rating }} / 5</small>
                 {% else %}
                     <small class="text-muted">No Rating</small>
                 {% endif %}

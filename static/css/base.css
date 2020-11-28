@@ -18,6 +18,18 @@ body {
     text-transform: uppercase;
 }
 
+.nav-item.dropdown, .dropdown-item {
+    margin-right: 20px;
+}
+
+.dropdown-item:hover,
+.dropdown-item:active,
+.dropdown-item:focus{
+    background: #17A2B8;
+    color: white;
+    border-radius: 2px;
+}
+
 .shop-now-button {
     background: #90e3f0;
     color: white;
@@ -145,7 +157,7 @@ input[name='q']::placeholder {
 
 .allauth-form-inner-content input {
     border-color: #000;
-    border-radius: 0;
+    border-radius: 2px;
 }
 
 .allauth-form-inner-content label:not([for='id_remember']) {
@@ -168,12 +180,12 @@ input[name='q']::placeholder {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    background-color: #000;
-    border: 1px solid #000;
+    background-color: #17A2B8;
+    border: 1px solid #17A2B8;
     padding: .375rem .75rem;
     font-size: 1rem;
     line-height: 1.5;
-    border-radius: 2px;
+    border-radius: 3px;
 
     /* standard bootstrap btn transitions */
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
@@ -182,8 +194,8 @@ input[name='q']::placeholder {
 .allauth-form-inner-content button:hover,
 .allauth-form-inner-content input[type='submit']:hover {	
 	color: #fff;
-    background-color: #222;
-    border-color: #222;
+    background-color: rgb(10, 123, 141);
+    border-color: #17A2B8;
 }
 
 .allauth-form-inner-content a {

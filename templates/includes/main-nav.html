@@ -1,7 +1,7 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <li class="nav-item dropdown" active>
+            <a class="logo-font font-weight-bold nav-link" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 All Products
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
@@ -13,7 +13,7 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="clothing-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link" href="#" id="clothing-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Clothing
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
@@ -25,7 +25,7 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="homeware-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link" href="#" id="homeware-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Homeware
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
@@ -36,7 +36,7 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Special Offers
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
@@ -49,11 +49,11 @@
     </ul>
     <ul class="navbar-nav w-auto mx-auto">
         <li class="nav-item mx-3 mx-md-sm-xs-o">
-            <i class="fas fa-heart"></i><a class="text-secondary text-decoration-none" href="#">&nbsp; Wishlist</a>
+            <i class="fas fa-heart text-secondary"></i><a class="text-white text-decoration-none" href="#">&nbsp; Wishlist</a>
         </li>
         <li class="nav-item mx-3 mx-md-sm-xs-0">
-            <i class="fas fa-shopping-cart"></i>
-            <a class="text-secondary text-decoration-none" href="{% url 'view_cart' %}">
+            <i class="fas fa-shopping-cart text-secondary"></i>
+            <a class="text-white text-decoration-none" href="{% url 'view_cart' %}">
             {% if product_count > 0 %}
             &nbsp; Cart&nbsp;({{product_count}})
             {% else %}

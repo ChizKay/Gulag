@@ -16,16 +16,32 @@
 
 {% block content %}
     <div class="overlay"></div>
-    <div class="container">
+    <hr>
+    <div class="container mb-3">
         <div class="row">
             <div class="col">
-                <hr>
-                <h2 class="logo-font mb-4">Checkout</h2>
-                <hr>
+            <br>
+                <div class="breadcrumb mb-4">
+                    <span class="mr-2">
+                        <a class="text-info small logo-font" href="{% url 'home' %}">
+                        <span>Home</span>
+                        </a>
+                    </span>
+                    <span><i class="fas fa-chevron-right text-secondary"></i></span>
+                    <span class="text-secondary mr-2">
+                        <a class="text-info small logo-font ml-2 mr-2" href="{% url 'view_cart' %}">
+                            Cart
+                        </a>
+                    <span>
+                    <span><i class="fas fa-chevron-right text-secondary mr-2"></i></span>
+                    <span class="text-dark logo-font">
+                            Checkout
+                    <span>
+                </div>
             </div>
         </div>
 
-        <div class="row">
+        <div class="row mt-3">
             <div class="col-12 col-lg-6 order-lg-last mb-5">
                 <p class="text-muted">Order Summary ({{ product_count }})</p>
                 <div class="row">
