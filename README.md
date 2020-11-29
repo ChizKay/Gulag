@@ -176,7 +176,7 @@ git commit.....
   DEBUG = 'DEVELOPMENT' in os.environ
   ```
   11. In heroku add a DISABLE_COLLECTSTATIC Config Var and set its value to 1. So heroku wil not start collecting static files.
-  12. Install gunicorn with ```pip3 install gunicorn``` and then ```pip3 freeze > requirements
+  12. Install gunicorn with ```pip3 install gunicorn``` and then  ```pip3 freeze > requirements
   13. Create a Procfile in the main dir and insert ```web: gunicorn the_woodworks.wsgi:application 
   14. In settings.py set ```ALLOWED_HOSTS = ['appname.herokuapp.com', 'localhost']
   15. commit to git and push to heroku with:
@@ -185,7 +185,7 @@ git commit.....
     git push heroku master
   ```
   16. To top it all off, there are several variables and secret keys that need to be set in the heroku app and should all be present in your settings.py. Here's a list of the       ones in my app:
-    ```
+   ```
     STRIPE_PUBLIC_KEY
     STRIPE_SECRET_KEY
     STRIPE_WH_SECRET
@@ -197,7 +197,7 @@ git commit.....
     DATABASE_URL
     DISABLE_COLLECTSTATIC
     USE_AWS
-  ```
+   ```
 
 ## Acknowledgement
   Because of the limited time i had to get the project done, most of the code was taken from the Boutique ado project, in particular the views, models, html, css javascript,   fixtures and images. I tried to search for datasets on https://www.kaggle.com/datasets, but I couldn't find any that were suitable. Alternatively i could've just added       products through the admin panel but that would have been time consuming.
