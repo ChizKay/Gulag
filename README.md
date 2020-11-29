@@ -198,7 +198,6 @@ git commit.....
     USE_AWS
    ```
 
-
 ## Acknowledgement
 
 Because of the limited time i had to get the project done, most of the code was taken from the Boutique ado project, in particular the views, models, html, css javascript, fixtures and images. I tried to search for datasets on https://www.kaggle.com/datasets, but I couldn't find any that were suitable. Alternatively i could've just added products through the admin panel but that would have been time consuming.
