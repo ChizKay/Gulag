@@ -22,14 +22,6 @@ body {
     margin-right: 20px;
 }
 
-.dropdown-item:hover,
-.dropdown-item:active,
-.dropdown-item:focus{
-    background: #17A2B8;
-    color: white;
-    border-radius: 2px;
-}
-
 .shop-now-button {
     background: #90e3f0;
     color: white;
