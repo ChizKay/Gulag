@@ -2,7 +2,7 @@
 
 Gulag is an E-commerce site built using Django. This project was highly inspired by the Project - Boutique Ado, most of the code and overall structure of the site was derived from that particular project. So kudos to the Code Institute team for creating a very detailed and professional looking project. 
 Due a time constraint, I had to work on the project while learning the new material (Boutique Ado project), so I built my own project around it.
-This a link to the site (Gulag)[https://chizkay-gulag.herokuapp.com/]
+This a link to the site [Gulag](https://chizkay-gulag.herokuapp.com/)
 
 ## Technologies Used
 
@@ -32,7 +32,7 @@ I tried to keep things as simple as posiible, mostly using bootstrap classes to 
 #### home
  Large devices:
 
-  Landing page with a background image taken from [https://www.google.com/imgres?imgurl=https://img.sdcexec.com/files/base/acbm/sdce/image/2020/10/GettyImages_961335672_ecommerce.5f7f22bc84360.png?auto%3Dformat%252Ccompress%26q%3D70&imgrefurl=https://www.sdcexec.com/software-technology/press-release/21197293/geodis-new-research-by-geodis-and-accenture-interactive-reveals-ecommerce-challenges-facing-global-brands&tbnid=Yi8-M9MQvrMwvM&vet=1&docid=SHiS25Rcy2yEkM&w=1920&h=836&itg=1&hl=en-US&source=sh/x/im](e-commerce background images), a SHOP NOW button in the center that takes you to the Products page. The   main header at the very top consisting of the main-page logo (clicking it takes you to the home page.), a search bar fixed centrally, two  links aligned to the right,         depending on if the user is authenticated. All logged in users will have a **My account** link that redirects to the user's Profile, with a **Logout** button beside it in     case the user decides to logout. Users that aren't authenticated will alternatively have a login link and **signup** button. 
+  Landing page with a background image taken from [e-commerce background images](https://www.google.com/imgres?imgurl=https://img.sdcexec.com/files/base/acbm/sdce/image/2020/10/GettyImages_961335672_ecommerce.5f7f22bc84360.png?auto%3Dformat%252Ccompress%26q%3D70&imgrefurl=https://www.sdcexec.com/software-technology/press-release/21197293/geodis-new-research-by-geodis-and-accenture-interactive-reveals-ecommerce-challenges-facing-global-brands&tbnid=Yi8-M9MQvrMwvM&vet=1&docid=SHiS25Rcy2yEkM&w=1920&h=836&itg=1&hl=en-US&source=sh/x/im), a SHOP NOW button in the center that takes you to the Products page. The   main header at the very top consisting of the main-page logo (clicking it takes you to the home page.), a search bar fixed centrally, two  links aligned to the right,         depending on if the user is authenticated. All logged in users will have a **My account** link that redirects to the user's Profile, with a **Logout** button beside it in     case the user decides to logout. Users that aren't authenticated will alternatively have a login link and **signup** button. 
   Below sits the main nav menu that contains all the product categories and sorting, and on the far end we have the Cart icon. Header is present on every page of the store,     fixed at the top.
 
  Medium - small devices:
@@ -199,8 +199,8 @@ git commit.....
     USE_AWS
    ```
 
-## Acknowledgement
 
-Because of the limited time i had to get the project done, most of the code was taken from the Boutique ado project, in particular the views, models, html, css javascript, fixtures and images. I tried to search for datasets on https://www.kaggle.com/datasets, but I couldn't find any that were suitable. Alternatively i could've just added products through the admin panel but that would have been time consuming.
-Big shout out to the slack community and my mentor Sandeep, they always seem to come through when I have roadblocks. 
+## Acknowledgement
+  Because of the limited time i had to get the project done, most of the code was taken from the Boutique ado project, in particular the views, models, html, css javascript,   fixtures and images. I tried to search for datasets on https://www.kaggle.com/datasets, but I couldn't find any that were suitable. Alternatively i could've just added       products through the admin panel but that would have been time consuming.
+  Big shout out to the slack community and my mentor Sandeep, they always seem to come through when I have roadblocks. 
 
