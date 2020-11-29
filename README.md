@@ -2,6 +2,7 @@
 
 Gulag is an E-commerce site built using Django. This project was highly inspired by the Project - Boutique Ado, most of the code and overall structure of the site was derived from that particular project. So kudos to the Code Institute team for creating a very detailed and professional looking project. 
 Due a time constraint, I had to work on the project while learning the new material (Boutique Ado project), so I built my own project around it.
+This a link to the site [https://chizkay-gulag.herokuapp.com/](Gulag)
 
 ## Technologies Used
 
