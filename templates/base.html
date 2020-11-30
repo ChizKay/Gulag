@@ -60,17 +60,17 @@
             </div>
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-right">
             {% if request.user.is_authenticated %}
-                    <ul class="list-inline list-unstyled text-center text-lg-right text-info my-0">
-                        <li class="list-inline-item dropdown">
-                            <a class="text-white nav-link" href="#" id="user-options"
+                    <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+                        <li class="list-inline-item dropdown bg-dark">
+                            <a class="nav-link text-white" href="#" id="user-options"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-user fa-lg text-secondary"></i> &nbsp;My Account
                             </a>
-                            <div class="dropdown-menu bg-drak border-0" aria-labelledby="user-options">
+                            <div class="dropdown-menu bg-dark border-0" aria-labelledby="user-options">
                                {% if request.user.is_superuser %}
-                                <a href="{% url 'add_product' %}" class="dropdown-item text-white">Product Management</a>
+                                <a href="{% url 'add_product' %}" class="dropdown-item text-secondary font-weight-bold">Product Management</a>
                                 {% endif %}
-                                <a href="{% url 'profile' %}" class="dropdown-item text-white">My Profile</a>  
+                                <a href="{% url 'profile' %}" class="dropdown-item text-secondary font-weight-bold">My Profile</a>  
                             </div>
                         </li>
                         <li class="list-inline-item">
